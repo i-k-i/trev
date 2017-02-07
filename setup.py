@@ -10,7 +10,7 @@ setup(
     # author_email='',
     license='WTFPL',
     packages=find_packages(),
-    long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
+    long_description=open(join(dirname(__file__), trev, 'README.md')).read(),
     zip_safe=False
 )
 #🐍
