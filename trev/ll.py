@@ -1,6 +1,6 @@
 import requests
 import logging
-from trev import config
+from . import config
 
 class LinguaLeo:
     # [Full request URI: http://api.lingualeo.com/gettranslates?port=1001]
