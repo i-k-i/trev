@@ -14,7 +14,7 @@ setup(
     install_requires=[
         'PyQt5',
         'requests',
-        'yandex_translate'
+        'yandex.translate'
     ],
     long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
     zip_safe=False,
