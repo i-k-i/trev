@@ -1,7 +1,4 @@
-import click
 from yandex_translate import YandexTranslate
-import notify2
-import subprocess
 import requests
 from config import yatapi_key
 
@@ -22,8 +19,6 @@ def auto_translate_ya(source_string):
 
 def main():
     print('Translate:', ya.translate('Привет, мир!', 'ru-en'))
-    # import ipdb; ipdb.set_trace()
-    # auto_translate('')
 
 if __name__ == '__main__':
     main()
