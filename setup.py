@@ -16,7 +16,7 @@ setup(
         'requests',
         'yandex.translate'
     ],
-    long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
+    # long_description=open(join(dirname(__file__), 'README.md')).read(),
     zip_safe=False,
     entry_points={
           'gui_scripts': [
