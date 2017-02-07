@@ -1,6 +1,6 @@
 from yandex_translate import YandexTranslate
 import requests
-from config import yatapi_key
+from trev.config import yatapi_key
 
 
 ya_tr= YandexTranslate(yatapi_key)
