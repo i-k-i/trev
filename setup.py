@@ -13,8 +13,7 @@ setup(
     packages=['trev'],
     install_requires=[
         'PyQt5',
-        'requests',
-        'logging'
+        'requests'
     ],
     long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
     zip_safe=False,
