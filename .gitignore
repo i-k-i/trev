@@ -2,3 +2,6 @@
 */__pycache__/
 */bu/
 trev/config.py
+build/
+dist/
+*.egg-info/

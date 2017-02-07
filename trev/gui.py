@@ -3,10 +3,10 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLa
 from PyQt5 import QtCore
 from PyQt5.QtGui import QCursor
 # from PyQt5 import QtGui
-from ll import LinguaLeo
-import config
-from yat import auto_translate_ya
-from systools import get_sel
+from trev.ll import LinguaLeo
+from trev import config
+from trev.yat import auto_translate_ya
+from trev.systools import get_sel
 
 app = QApplication(sys.argv)
 

@@ -1,6 +1,6 @@
 import requests
 import logging
-import config
+from trev import config
 
 class LinguaLeo:
     # [Full request URI: http://api.lingualeo.com/gettranslates?port=1001]
@@ -59,7 +59,7 @@ class LinguaLeo:
             return word, tword
         elif (source,target) == ('ru', 'en'):
             return tword, word
-            
+
     def translate(self, word, source='ru', target='en'):
         '''translates from any language'''
         params = {
