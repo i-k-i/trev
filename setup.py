@@ -9,7 +9,9 @@ setup(
     author='i-k-i project',
     # author_email='',
     license='WTFPL',
-    packages=find_packages(),
+    packages=[
+        'PyQt5',
+    ],
     long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
     zip_safe=False
 )
