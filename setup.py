@@ -8,7 +8,7 @@ setup(
     url='https://github.com/i-k-i/trev',
     author='i-k-i project',
     # author_email='',
-    license='WTFPL'
+    license='WTFPL',
     packages=find_packages(),
     long_description=open(join(dirname(__file__), trev, 'README.md')).read(),
     zip_safe=False
