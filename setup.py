@@ -15,7 +15,7 @@ setup(
         'PyQt5'
     ],
     long_description=open(join(dirname(__file__), 'trev', 'README.md')).read(),
-    zip_safe=False
+    zip_safe=False,
     entry_points={
           'gui_scripts': [
               'trev = trev.gui:main'
