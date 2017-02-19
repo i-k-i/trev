@@ -20,5 +20,5 @@
 `#cd trev`  
 `#cp trev/def.config.py trev/config.py`  
 `#edit trev/config.py #` __update ll and ya sections__  
-`#sudo pip3 install --editable .`  
+`#pip3 install --editable .`  
 `#trev`  
