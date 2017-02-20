@@ -75,6 +75,7 @@ class Window(QWidget):
         print(word, tword)
         print(data)
         add_resp = self.llo.add_word(word, tword, data['source'], data['target'])
+        import ipdb; ipdb.set_trace()
         # print (add_resp.status_code)
 
     def eventFilter(self, object, event):
