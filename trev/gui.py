@@ -13,7 +13,8 @@ app = QApplication(sys.argv)
 class Window(QWidget):
     def __init__(self, data=None, llo=None):
         super(Window, self).__init__()
-        self.make_window(self.prepare_data(data), llo)
+        self.make_window(self.prepare_data(data))
+        self.llo=llo
 
     def prepare_data(self, data):
         if not data:
@@ -30,7 +31,7 @@ class Window(QWidget):
             print(data)
         return data
 
-    def make_window(self, data, llo):
+    def make_window(self, data):
         self.installEventFilter(self)
         # make window not decorated and on the top
         self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint| QtCore.Qt.FramelessWindowHint)
@@ -73,7 +74,7 @@ class Window(QWidget):
     def add_to_lldict(self, word, tword, data):
         print(word, tword)
         print(data)
-        add_resp = llo.add_word(word, tword, source, target)
+        add_resp = self.llo.add_word(word, tword, source, target)
         print (add_resp.json())
 
     def eventFilter(self, object, event):
