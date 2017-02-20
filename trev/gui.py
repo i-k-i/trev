@@ -108,6 +108,7 @@ def main():
         'source': source,
         'target':target,
     }
+    import ipdb; ipdb.set_trace()
     w = Window(data=data, llo=ll)
     w.show()
     # import ipdb; ipdb.set_trace()

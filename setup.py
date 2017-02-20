@@ -14,7 +14,8 @@ setup(
     install_requires=[
         'PyQt5',
         'requests',
-        'yandex.translate'
+        'yandex.translate',
+        'ipdb'
     ],
     # long_description=open(join(dirname(__file__), 'README.md')).read(),
     zip_safe=False,
