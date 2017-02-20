@@ -74,7 +74,7 @@ class Window(QWidget):
     def add_to_lldict(self, word, tword, data):
         print(word, tword)
         print(data)
-        add_resp = self.llo.add_word(word, tword, source, target)
+        add_resp = self.llo.add_word(word, tword, data['source'], data['target'])
         print (add_resp.json())
 
     def eventFilter(self, object, event):
