@@ -11,7 +11,7 @@ from trev.systools import get_sel
 app = QApplication(sys.argv)
 
 class Window(QWidget):
-    def __init__(self, data=None):
+    def __init__(self, data=None, llo=None):
         super(Window, self).__init__()
         self.make_window(self.prepare_data(data))
 
@@ -20,7 +20,9 @@ class Window(QWidget):
             data = {
                 'src': 'source',
                 'yat': 'yandex translated',
-                'll': 'lingualeo translated'
+                'll': 'lingualeo translated',
+                'source': 'source_lang',
+                'target': 'target_lang'
                 }
         else:
             # for data.items()
@@ -71,7 +73,7 @@ class Window(QWidget):
     def add_to_lldict(self, word, tword, data):
         print(word, tword)
         print(data)
-        add_resp = ll.add_word(word, tword, source, target)
+        add_resp = llo.add_word(word, tword, source, target)
         print (add_resp.json())
 
     def eventFilter(self, object, event):
@@ -100,9 +102,11 @@ def main():
     data = {
         'src': selected_text,
         'yat': yat_result,
-        'll': ll_trans
+        'll': ll_trans,
+        'source': source,
+        'target':target,
     }
-    w = Window(data=data)
+    w = Window(data=data, llo=ll)
     w.show()
     # import ipdb; ipdb.set_trace()
     sys.exit(app.exec_())
