@@ -48,10 +48,10 @@ class Window(QWidget):
         if data['src']:
             if data['yat']['text'][0]:
                 self.yat_button.setEnabled(True)
-                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['yat']['text'][0]), data)
+                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['yat']['text'][0], data))
             if data['ll']:
                 self.ll_button.setEnabled(True)
-                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['ll']), data)
+                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['ll'], data))
         layout = QGridLayout(self)
         layout.addWidget(self.src_lable, 0, 0, 1,-1)
         layout.addWidget(self.yat_label, 1, 0)

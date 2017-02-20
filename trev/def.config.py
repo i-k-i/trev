@@ -5,7 +5,7 @@ logging.basicConfig(level=logging.DEBUG, format=formatter)
 
 # ***ll***
 # lingualeo auth
-# register
+# register http://lingualeo.com/ru/register
 ll_login = 'email'
 ll_passwd = 'passwd'
 # ***end ll***
