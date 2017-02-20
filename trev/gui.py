@@ -48,10 +48,10 @@ class Window(QWidget):
         if data['src']:
             if data['yat']['text'][0]:
                 self.yat_button.setEnabled(True)
-                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['yat']['text'][0]))
+                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['yat']['text'][0]), data)
             if data['ll']:
                 self.ll_button.setEnabled(True)
-                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['ll']))
+                self.yat_button.clicked.connect(lambda: self.add_to_lldict(data['src'], data['ll']), data)
         layout = QGridLayout(self)
         layout.addWidget(self.src_lable, 0, 0, 1,-1)
         layout.addWidget(self.yat_label, 1, 0)
@@ -68,8 +68,9 @@ class Window(QWidget):
         if event.key() == QtCore.Qt.Key_Escape:
             self.exit()
 
-    def add_to_lldict(self, word, tword):
+    def add_to_lldict(self, word, tword, data):
         print(word, tword)
+        print(data)
 
     def eventFilter(self, object, event):
         if event.type()== QtCore.QEvent.WindowDeactivate:
