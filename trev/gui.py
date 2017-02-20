@@ -13,7 +13,7 @@ app = QApplication(sys.argv)
 class Window(QWidget):
     def __init__(self, data=None, llo=None):
         super(Window, self).__init__()
-        self.make_window(self.prepare_data(data))
+        self.make_window(self.prepare_data(data), llo)
 
     def prepare_data(self, data):
         if not data:
@@ -30,7 +30,7 @@ class Window(QWidget):
             print(data)
         return data
 
-    def make_window(self, data):
+    def make_window(self, data, llo):
         self.installEventFilter(self)
         # make window not decorated and on the top
         self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint| QtCore.Qt.FramelessWindowHint)
