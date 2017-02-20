@@ -56,7 +56,7 @@ class LinguaLeo:
         if self.__check_resp__(resp):
             return resp
 
-    def prepare_to_adding(word, tword, source, target):
+    def prepare_to_adding(self, word, tword, source, target):
         if (source, target) == ('en', 'ru'):
             return word, tword
         elif (source,target) == ('ru', 'en'):
