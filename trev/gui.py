@@ -75,7 +75,7 @@ class Window(QWidget):
         print(word, tword)
         print(data)
         add_resp = self.llo.add_word(word, tword, data['source'], data['target'])
-        print (add_resp.json())
+        # print (add_resp.status_code)
 
     def eventFilter(self, object, event):
         if event.type()== QtCore.QEvent.WindowDeactivate:
