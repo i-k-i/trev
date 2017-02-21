@@ -1,4 +1,4 @@
-# trev
+# treve
 Translation everywhere
 
 Allows translate text-content from X selection and add new items to dictionary of LinguaLeo
@@ -11,7 +11,7 @@ Allows translate text-content from X selection and add new items to dictionary o
 ## Installation
 
 ```sh
-# git clone https://github.com/i-k-i/trev
+# git clone https://github.com/i-k-i/treve
 # cd trev
 # cp trev/def.config.py trev/config.py
 # edit trev/config.py  # Update "ll" and "ya" sections
@@ -20,7 +20,7 @@ Allows translate text-content from X selection and add new items to dictionary o
 
 ## Using virtualenv
 ```sh
-# git clone https://github.com/i-k-i/trev
+# git clone https://github.com/i-k-i/treve
 # cd trev
 # virtualenv -p python3 venv
 # source venv/bin/activate
