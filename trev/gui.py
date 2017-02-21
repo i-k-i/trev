@@ -110,7 +110,7 @@ def main():
         'target':target,
     }
     # import ipdb; ipdb.set_trace()
-    w = Window(data=data, llo=ll)
+    w = Window(data=data, llo=llo)
     w.show()
     # import ipdb; ipdb.set_trace()
     sys.exit(app.exec_())
