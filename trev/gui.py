@@ -94,9 +94,10 @@ def main():
     if not selected_text:
         sys.exit(app.exec_())
     yat_result = auto_translate_ya(selected_text)
-    ll = LinguaLeo(config.ll_login, config.ll_passwd)
+    llo = LinguaLeo(config.ll_login, config.ll_passwd)
+    llo.login()
     source, target = parce_yat_lang(yat_result)
-    ll_trans_resp = ll.translate(selected_text, source=source, target=target)
+    ll_trans_resp = llo.translate(selected_text, source=source, target=target)
     if ll_trans_resp:
         ll_trans = ll_trans_resp.json()['translation']
     else:
@@ -108,7 +109,7 @@ def main():
         'source': source,
         'target':target,
     }
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     w = Window(data=data, llo=ll)
     w.show()
     # import ipdb; ipdb.set_trace()

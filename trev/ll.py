@@ -1,6 +1,8 @@
 import requests
 import logging
 from . import config
+# import config
+
 
 class LinguaLeo:
     # [Full request URI: http://api.lingualeo.com/gettranslates?port=1001]
@@ -40,7 +42,7 @@ class LinguaLeo:
         if self.__check_resp__(resp):
             return resp
 
-    def add_word(self, word, tword, source, target):
+    def add_word(self, word, tword, source='en', target='ru'):
         '''"word must be in english" - LinguaLeo '''
         cor_word, cor_tword = self.prepare_to_adding(word, tword, source, target)
         data = {
@@ -54,6 +56,7 @@ class LinguaLeo:
 
         resp = self.session.post(self.urls['add_word'], data=data)
         if self.__check_resp__(resp):
+            import ipdb; ipdb.set_trace()
             return resp
 
     def prepare_to_adding(self, word, tword, source, target):
@@ -62,7 +65,7 @@ class LinguaLeo:
         elif (source,target) == ('ru', 'en'):
             return tword, word
         else:
-            logging.error('Oy vey.  '. format())
+            logging.error('Oy vey. Source: {}, target: {}'. format(source, target))
             return ('None','нет')
 
     def translate(self, word, source='ru', target='en'):
@@ -94,6 +97,7 @@ def main():
     ll = LinguaLeo(config.ll_login, config.ll_passwd)
     ll.login()
     # resp = ll.add_word('offset', 'смещение')
+    resp = ll.add_word('sunrise', 'восход солнца')
 
 if __name__ == '__main__':
     main()
