@@ -2,15 +2,15 @@ from setuptools import setup, find_packages
 from os.path import join, dirname
 
 setup(
-    name='trev',
-    version='2017.02.07',
+    name='treve',
+    version='2017.02.22',
     description = 'Show translation of selected text',
-    url='https://github.com/i-k-i/trev',
+    url='https://github.com/i-k-i/treve',
     author='i-k-i project',
     # author_email='',
     license='WTFPL',
     # packages=find_packages(),
-    packages=['trev'],
+    packages=['treve'],
     install_requires=[
         'PyQt5',
         'requests',
@@ -21,7 +21,7 @@ setup(
     zip_safe=False,
     entry_points={
           'gui_scripts': [
-              'trev = trev.gui:main'
+              'treve = treve.gui:main'
           ]
       },
 )
