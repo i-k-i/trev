@@ -28,7 +28,6 @@ class Window(QWidget):
         else:
             # for data.items()
             data['src']=data['src'].strip()
-            print(data)
         return data
 
     def make_window(self, data):
@@ -72,16 +71,11 @@ class Window(QWidget):
             self.exit()
 
     def add_to_lldict(self, word, tword, data):
-        print(word, tword)
-        print(data)
         add_resp = self.llo.add_word(word, tword, data['source'], data['target'])
         import ipdb; ipdb.set_trace()
-        # print (add_resp.status_code)
 
     def eventFilter(self, object, event):
         if event.type()== QtCore.QEvent.WindowDeactivate:
-            # print("widget window has lost focus")
-            # sys.exit(app.exec_())
             self.exit()
         return False
 

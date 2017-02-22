@@ -1,7 +1,7 @@
 *.py[cod]
 */__pycache__/
 */bu/
-trev/config.py
+*/config.py
 build/
 dist/
 venv/
