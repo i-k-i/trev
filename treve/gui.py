@@ -72,7 +72,6 @@ class Window(QWidget):
 
     def add_to_lldict(self, word, tword, data):
         add_resp = self.llo.add_word(word, tword, data['source'], data['target'])
-        import ipdb; ipdb.set_trace()
 
     def eventFilter(self, object, event):
         if event.type()== QtCore.QEvent.WindowDeactivate:

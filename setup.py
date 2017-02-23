@@ -3,7 +3,7 @@ from os.path import join, dirname
 
 setup(
     name='treve',
-    version='2017.02.22',
+    version='2017.02.23',
     description = 'Show translation of selected text',
     url='https://github.com/i-k-i/treve',
     author='i-k-i project',
