@@ -12,20 +12,20 @@ Allows translate text-content from X selection and add new items to dictionary o
 
 ```sh
 # git clone https://github.com/i-k-i/treve
-# cd trev
-# cp trev/def.config.py trev/config.py
-# edit trev/config.py  # Update "ll" and "ya" sections
+# cd treve
+# cp treve/def.config.py treve/config.py
+# edit treve/config.py  # Update "ll" and "ya" sections
 # sudo pip3 install --editable .
 ```
 
 ## Using virtualenv
 ```sh
 # git clone https://github.com/i-k-i/treve
-# cd trev
+# cd treve
 # virtualenv -p python3 venv
 # source venv/bin/activate
-# cp trev/def.config.py trev/config.py
-# edit trev/config.py  # Update "ll" and "ya" sections
+# cp treve/def.config.py treve/config.py
+# edit treve/config.py  # Update "ll" and "ya" sections
 # pip3 install --editable .
 ```
 
