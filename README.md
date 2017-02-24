@@ -15,7 +15,7 @@ Allows translate text-content from X selection and add new items to dictionary o
 # cd treve
 # cp treve/def.config.py treve/config.py
 # edit treve/config.py  # Update "ll" and "ya" sections
-# sudo pip3 install --editable .
+# pip3 install --editable .
 ```
 
 ## Using virtualenv
@@ -30,4 +30,4 @@ Allows translate text-content from X selection and add new items to dictionary o
 ```
 
 ## Using
-The best way to using trev it is execution by keyboard shortcut
+The best way to using trev it is execution treve aplication by keyboard shortcut
